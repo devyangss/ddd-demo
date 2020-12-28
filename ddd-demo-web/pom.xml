@@ -9,9 +9,9 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<groupId>com.study</groupId>
-	<artifactId>ddd-demo-controller</artifactId>
+	<artifactId>ddd-demo-web</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ddd-demo-controller</name>
+	<name>ddd-demo-web</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -22,18 +22,11 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-			<!-- 排除默认的tomcat容器-->
-			<exclusions>
-				<exclusion>
-					<groupId>org.springframework.boot</groupId>
-					<artifactId>spring-boot-starter-tomcat</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
-		<!-- undertow容器代替默认的tomcat容器 -->
+
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-undertow</artifactId>
+			<groupId>com.github.xiaoymin</groupId>
+			<artifactId>knife4j-spring-boot-starter</artifactId>
 		</dependency>
 
 		<dependency>

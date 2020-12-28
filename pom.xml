@@ -18,7 +18,7 @@
     <!-- 聚合子模块 -->
     <modules>
         <module>ddd-demo-app</module>
-        <module>ddd-demo-controller</module>
+        <module>ddd-demo-web</module>
         <module>ddd-demo-domain</module>
         <module>ddd-demo-infrastructure</module>
     </modules>
@@ -26,26 +26,28 @@
     <properties>
         <java.version>1.8</java.version>
         <spring.version>5.1.8.RELEASE</spring.version>
-        <spring.boot.version>2.3.6.RELEASE</spring.boot.version>
+        <spring.boot.version>2.4.0</spring.boot.version>
+        <knife4j.version>2.0.8</knife4j.version>
+        <lombok.version>1.18.10</lombok.version>
     </properties>
 
     <!-- 依赖管理,声明依赖 -->
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>${parent.groupId}</groupId>
+                <groupId>${project.groupId}</groupId>
                 <artifactId>ddd-demo-app</artifactId>
-                <version>${parent.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>${parent.groupId}</groupId>
+                <groupId>${project.groupId}</groupId>
                 <artifactId>ddd-demo-domain</artifactId>
-                <version>${parent.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>${parent.groupId}</groupId>
+                <groupId>${project.groupId}</groupId>
                 <artifactId>ddd-demo-infrastructure</artifactId>
-                <version>${parent.version}</version>
+                <version>${project.version}</version>
             </dependency>
 
             <dependency>
@@ -59,6 +61,29 @@
                 <version>${spring.boot.version}</version>
             </dependency>
 
+            <!-- swagger Begin -->
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
+            </dependency>
+            <!-- swagger End -->
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <optional>true</optional>
+            </dependency>
+
+            <!-- log4j2日志 Begin -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-log4j2</artifactId>
+                <version>${log4j2.version}</version>
+            </dependency>
+            <!-- log4j2日志 End -->
+
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-test</artifactId>
@@ -68,7 +93,16 @@
     </dependencyManagement>
 
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <version>${spring.boot.version}</version>
+        </dependency>
 
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

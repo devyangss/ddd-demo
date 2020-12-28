@@ -1,0 +1,12 @@
+server:
+  servlet:
+    context-path: /api/ddd-demo
+  port: 8081
+
+knife4j:
+  # 开启增强配置
+  enable: true
+
+spring:
+  application:
+    name: ddd-demo
