@@ -17,7 +17,7 @@
 
     <!-- 聚合子模块 -->
     <modules>
-        <module>ddd-demo-app</module>
+        <module>ddd-demo-application</module>
         <module>ddd-demo-web</module>
         <module>ddd-demo-domain</module>
         <module>ddd-demo-infrastructure</module>
@@ -29,6 +29,9 @@
         <spring.boot.version>2.4.0</spring.boot.version>
         <knife4j.version>2.0.8</knife4j.version>
         <lombok.version>1.18.10</lombok.version>
+        <mybatis.plus.version>3.4.1</mybatis.plus.version>
+        <dynamic.datasource.version>3.3.1</dynamic.datasource.version>
+        <druid.version>1.2.4</druid.version>
     </properties>
 
     <!-- 依赖管理,声明依赖 -->
@@ -36,7 +39,7 @@
         <dependencies>
             <dependency>
                 <groupId>${project.groupId}</groupId>
-                <artifactId>ddd-demo-app</artifactId>
+                <artifactId>ddd-demo-application</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
@@ -61,13 +64,13 @@
                 <version>${spring.boot.version}</version>
             </dependency>
 
-            <!-- swagger Begin -->
+            <!-- swagger begin -->
             <dependency>
                 <groupId>com.github.xiaoymin</groupId>
                 <artifactId>knife4j-spring-boot-starter</artifactId>
                 <version>${knife4j.version}</version>
             </dependency>
-            <!-- swagger End -->
+            <!-- swagger end -->
 
             <dependency>
                 <groupId>org.projectlombok</groupId>
@@ -76,13 +79,37 @@
                 <optional>true</optional>
             </dependency>
 
-            <!-- log4j2日志 Begin -->
+            <!-- log4j2日志 begin -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-log4j2</artifactId>
                 <version>${log4j2.version}</version>
             </dependency>
-            <!-- log4j2日志 End -->
+            <!-- log4j2日志 end -->
+
+            <!-- MyBatis-Plus begin -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis.plus.version}</version>
+            </dependency>
+            <!-- MyBatis-Plus end -->
+
+            <!-- 动态数据源 begin-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
+                <version>${dynamic.datasource.version}</version>
+            </dependency>
+            <!-- 动态数据源 end-->
+
+            <!-- druid数据库连接池 begin -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+            <!-- druid数据库连接池 end -->
 
             <dependency>
                 <groupId>org.springframework.boot</groupId>
