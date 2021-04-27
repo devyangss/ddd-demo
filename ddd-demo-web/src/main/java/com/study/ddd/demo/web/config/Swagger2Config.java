@@ -29,7 +29,7 @@ public class Swagger2Config {
                         .version("1.0")
                         .build())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.study.ddd.demo.web.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.study.ddd.demo.web.http.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }

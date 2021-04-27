@@ -1,11 +1,10 @@
-package com.study.ddd.demo.web.controller;
+package com.study.ddd.demo.web.http.controller;
 
 import com.study.ddd.demo.web.dto.CreateTestReqDTO;
 import com.study.ddd.demo.web.dto.CreateTestRespDTO;
 import com.study.ddd.demo.web.dto.GetTestRespDTO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiResponse;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

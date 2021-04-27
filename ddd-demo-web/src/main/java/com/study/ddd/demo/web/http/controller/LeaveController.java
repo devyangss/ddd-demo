@@ -1,4 +1,4 @@
-package com.study.ddd.demo.web.controller;
+package com.study.ddd.demo.web.http.controller;
 
 import com.study.ddd.demo.application.command.LeaveApplicationCommand;
 import com.study.ddd.demo.web.assembler.LeaveAssembler;
